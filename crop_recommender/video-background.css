@@ -1,0 +1,41 @@
+/* Video background styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    height: 100vh;
+    position: relative;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind all content */
+    overflow: hidden;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Ensure video fills the screen without distortion */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the video */
+}
+
+/* Ensure content stays above the video */
+.form-container, .container, .error {
+    position: relative;
+    z-index: 10;
+}
+
+/* Loading overlay adjustments to stay above video */
+.loading-overlay {
+    z-index: 1000; /* Already set, just ensuring consistency */
+}

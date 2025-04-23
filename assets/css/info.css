@@ -1,0 +1,259 @@
+/* assets/css/info.css */
+
+/* Theme Variables */
+:root {
+    --background-color: #F5F5DC; /* Beige */
+    --text-color: #333;
+    --navbar-bg: #fff;
+    --navbar-border: #E0E0E0;
+    --navbar-brand-color: #2E7D32; /* Green */
+    --navbar-brand-hover: #1B5E20; /* Darker Green */
+    --nav-link-color: #333;
+    --nav-link-hover: #2E7D32;
+    --nav-link-active: #2E7D32;
+    --btn-primary-bg: #2E7D32; /* Green */
+    --btn-primary-border: #2E7D32;
+    --btn-primary-hover-bg: #1B5E20; /* Darker Green */
+    --btn-primary-hover-border: #1B5E20;
+}
+
+[data-theme="dark"] {
+    --background-color: #1A3C34; /* Dark Greenish */
+    --text-color: #E0E0E0;
+    --navbar-bg: #2E7D32; /* Green */
+    --navbar-border: #4CAF50;
+    --navbar-brand-color: #FBC02D; /* Gold */
+    --navbar-brand-hover: #F9A825;
+    --nav-link-color: #E0E0E0;
+    --nav-link-hover: #FBC02D;
+    --nav-link-active: #FBC02D;
+    --btn-primary-bg: #1B5E20; /* Darker Green */
+    --btn-primary-border: #1B5E20;
+    --btn-primary-hover-bg: #2E7D32;
+    --btn-primary-hover-border: #2E7D32;
+}
+
+/* Sticky Footer Layout */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #1B5E20; /* Dark Green */
+    padding: 20px 0;
+    color: #E0E0E0;
+    text-align: center;
+}
+
+footer a {
+    color: #E0E0E0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #FBC02D; /* Gold */
+}
+
+/* About Us Section */
+.about-section {
+    background-color: var(--background-color);
+    padding: 80px 0;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-section h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Contact Us Section */
+.contact-section {
+    background-color: var(--background-color);
+    padding: 80px 0;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-section h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.contact-section .form-control {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--navbar-border);
+}
+
+.contact-section .form-control:focus {
+    border-color: var(--btn-primary-bg);
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+.contact-section .btn-primary {
+    background-color: var(--btn-primary-bg);
+    border-color: var(--btn-primary-border);
+}
+
+.contact-section .btn-primary:hover {
+    background-color: var(--btn-primary-hover-bg);
+    border-color: var(--btn-primary-hover-border);
+}
+
+/* Terms of Service Section */
+.terms-section {
+    background-color: var(--background-color);
+    padding: 80px 0;
+}
+
+.terms-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.terms-section h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.terms-section p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .about-section,
+    .contact-section,
+    .terms-section {
+        padding: 50px 0;
+    }
+
+    .about-section h1,
+    .contact-section h1,
+    .terms-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-section h3,
+    .contact-section h3,
+    .terms-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p,
+    .contact-section p,
+    .terms-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section,
+    .contact-section,
+    .terms-section {
+        padding: 40px 0;
+    }
+
+    .about-section h1,
+    .contact-section h1,
+    .terms-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .about-section h3,
+    .contact-section h3,
+    .terms-section h3 {
+        font-size: 1.25rem;
+    }
+
+    .about-section p,
+    .contact-section p,
+    .terms-section p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section,
+    .contact-section,
+    .terms-section {
+        padding: 30px 0;
+    }
+
+    .about-section h1,
+    .contact-section h1,
+    .terms-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-section h3,
+    .contact-section h3,
+    .terms-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .about-section p,
+    .contact-section p,
+    .terms-section p {
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        display: block;
+        margin: 5px 0;
+    }
+}

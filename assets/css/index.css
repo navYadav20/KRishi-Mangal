@@ -1,0 +1,610 @@
+/* assets/css/index.css */
+
+/* Agricultural Theme */
+:root {
+    /* Light Mode Variables */
+    --background-color: #F5F5DC; /* Beige */
+    --text-color: #333;
+    --navbar-bg: #fff;
+    --navbar-border: #E0E0E0;
+    --navbar-brand-color: #2E7D32; /* Green */
+    --navbar-brand-hover: #1B5E20; /* Darker Green */
+    --nav-link-color: #333;
+    --nav-link-hover: #2E7D32;
+    --nav-link-active: #2E7D32;
+    --card-bg: #fff;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --btn-primary-bg: #2E7D32; /* Green */
+    --btn-primary-border: #2E7D32;
+    --btn-primary-hover-bg: #1B5E20; /* Darker Green */
+    --btn-primary-hover-border: #1B5E20;
+    --btn-success-bg: #FBC02D; /* Gold */
+    --btn-success-border: #FBC02D;
+    --btn-success-hover-bg: #F9A825; /* Darker Gold */
+    --btn-success-hover-border: #F9A825;
+    --btn-danger-bg: #D32F2F;
+    --btn-danger-border: #D32F2F;
+    --btn-danger-hover-bg: #B71C1C;
+    --btn-danger-hover-border: #B71C1C;
+    --dropdown-bg: #fff;
+    --dropdown-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --dropdown-item-hover: #F5F5DC;
+    --cta: #000000;
+}
+
+[data-theme="dark"] {
+    /* Dark Mode Variables */
+    --background-color: #1A3C34; /* Dark Greenish */
+    --text-color: #E0E0E0;
+    --navbar-bg: #2E7D32; /* Green */
+    --navbar-border: #4CAF50;
+    --navbar-brand-color: #FBC02D; /* Gold */
+    --navbar-brand-hover: #F9A825;
+    --nav-link-color: #E0E0E0;
+    --nav-link-hover: #FBC02D;
+    --nav-link-active: #FBC02D;
+    --card-bg: #2E7D32;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --btn-primary-bg: #1B5E20; /* Darker Green */
+    --btn-primary-border: #1B5E20;
+    --btn-primary-hover-bg: #2E7D32;
+    --btn-primary-hover-border: #2E7D32;
+    --btn-success-bg: #F9A825; /* Darker Gold */
+    --btn-success-border: #F9A825;
+    --btn-success-hover-bg: #FBC02D;
+    --btn-success-hover-border: #FBC02D;
+    --btn-danger-bg: #B71C1C;
+    --btn-danger-border: #B71C1C;
+    --btn-danger-hover-bg: #D32F2F;
+    --btn-danger-hover-border: #D32F2F;
+    --dropdown-bg: #2E7D32;
+    --dropdown-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --dropdown-item-hover: #4CAF50;
+    --cta: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/cropField.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2E7D32, #8D6E63); /* Green to Brown */
+    z-index: -1;
+}
+
+.hero-section .container h1.display-4 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 1s ease-in-out;
+    color: #FFFFFF !important; /* Pure white in light mode with high specificity */
+}
+
+.hero-section .container p.lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-in-out 0.3s;
+    animation-fill-mode: both;
+    color: #FFFFFF !important; /* Pure white in light mode with high specificity */
+}
+
+.hero-section .btn {
+    font-size: 1.25rem;
+    padding: 12px 30px;
+    animation: fadeInUp 1s ease-in-out 0.6s;
+    animation-fill-mode: both;
+}
+
+/* Adjust text color for dark mode */
+[data-theme="dark"] .hero-section .container h1.display-4,
+[data-theme="dark"] .hero-section .container p.lead {
+    color: #E0E0E0 !important; /* Lighter color for dark mode readability */
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.2s; }
+.feature-card:nth-child(2) { animation-delay: 0.4s; }
+.feature-card:nth-child(3) { animation-delay: 0.6s; }
+
+.feature-card .card-body {
+    padding: 2rem;
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--btn-primary-bg);
+    margin-bottom: 1rem;
+}
+
+.feature-card h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 80px 0;
+    background-color: var(--background-color); /* Light Green */
+}
+
+.pricing-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.pricing-card {
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.pricing-card:nth-child(1) { animation-delay: 0.2s; }
+.pricing-card:nth-child(2) { animation-delay: 0.4s; }
+.pricing-card:nth-child(3) { animation-delay: 0.6s; }
+
+.pricing-card .card-header {
+    background-color: var(--btn-primary-bg);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.5rem;
+}
+
+.pricing-card .card-body {
+    padding: 2rem;
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--btn-primary-bg);
+    margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.pricing-card ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.pricing-card ul li i {
+    color: var(--btn-success-bg);
+    margin-right: 0.5rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.testimonial-card {
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.testimonial-card:nth-child(1) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.4s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.6s; }
+
+.testimonial-card .card-body {
+    padding: 2rem;
+}
+
+.testimonial-card .quote {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--btn-primary-bg);
+}
+
+.testimonial-card .role {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--background-color); /* Green to Brown */
+    color: var(--cta);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.cta-section p.lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-section .btn {
+    font-size: 1.25rem;
+    padding: 12px 30px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--background-color);
+    color: var(--cta);
+     /* Dark Green */
+}
+
+footer a {
+    color: var(--cta);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--btn-success-bg);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-section p.lead {
+        font-size: 1.3rem;
+    }
+
+    .hero-section .btn {
+        font-size: 1.1rem;
+        padding: 10px 25px;
+    }
+
+    .features-section h2,
+    .pricing-section h2,
+    .testimonials-section h2,
+    .cta-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        min-height: 80vh;
+        padding: 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p.lead {
+        font-size: 1.2rem;
+    }
+
+    .hero-section .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .features-section,
+    .pricing-section,
+    .testimonials-section,
+    .cta-section {
+        padding: 50px 0;
+    }
+
+    .features-section h2,
+    .pricing-section h2,
+    .testimonials-section h2,
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .feature-card h5,
+    .pricing-card .card-header,
+    .pricing-card .price {
+        font-size: 1.25rem;
+    }
+
+    .feature-card p,
+    .pricing-card ul li,
+    .testimonial-card .quote {
+        font-size: 0.9rem;
+    }
+
+    .cta-section p.lead {
+        font-size: 1rem;
+    }
+
+    .cta-section .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 70vh;
+        background-attachment: scroll; /* Remove fixed background on mobile */
+        padding: 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-section p.lead {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-section .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        display: block;
+        margin: 10px auto;
+        width: fit-content;
+    }
+
+    .features-section,
+    .pricing-section,
+    .testimonials-section,
+    .cta-section {
+        padding: 40px 0;
+    }
+
+    .features-section h2,
+    .pricing-section h2,
+    .testimonials-section h2,
+    .cta-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .feature-card .card-body,
+    .pricing-card .card-body,
+    .testimonial-card .card-body {
+        padding: 1.5rem;
+    }
+
+    .feature-card i {
+        font-size: 2.5rem;
+    }
+
+    .feature-card h5,
+    .pricing-card .card-header,
+    .pricing-card .price {
+        font-size: 1.1rem;
+    }
+
+    .feature-card p,
+    .pricing-card ul li,
+    .testimonial-card .quote {
+        font-size: 0.85rem;
+    }
+
+    footer p,
+    footer a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 60vh;
+        padding: 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section p.lead {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .btn {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+        margin: 8px auto;
+    }
+
+    .features-section,
+    .pricing-section,
+    .testimonials-section,
+    .cta-section {
+        padding: 30px 0;
+    }
+
+    .features-section h2,
+    .pricing-section h2,
+    .testimonials-section h2,
+    .cta-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .feature-card .card-body,
+    .pricing-card .card-body,
+    .testimonial-card .card-body {
+        padding: 1rem;
+    }
+
+    .feature-card i {
+        font-size: 2rem;
+    }
+
+    .feature-card h5,
+    .pricing-card .card-header,
+    .pricing-card .price {
+        font-size: 1rem;
+    }
+
+    .feature-card p,
+    .pricing-card ul li,
+    .testimonial-card .quote {
+        font-size: 0.8rem;
+    }
+
+    .cta-section p.lead {
+        font-size: 0.9rem;
+    }
+
+    .cta-section .btn {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    footer p,
+    footer a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-section {
+        min-height: 50vh;
+        padding: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+
+    .hero-section p.lead {
+        font-size: 0.85rem;
+    }
+
+    .hero-section .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        margin: 6px auto;
+    }
+
+    .features-section h2,
+    .pricing-section h2,
+    .testimonials-section h2,
+    .cta-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-card .card-body,
+    .pricing-card .card-body,
+    .testimonial-card .card-body {
+        padding: 0.75rem;
+    }
+
+    .feature-card i {
+        font-size: 1.75rem;
+    }
+
+    .feature-card h5,
+    .pricing-card .card-header,
+    .pricing-card .price {
+        font-size: 0.9rem;
+    }
+
+    .feature-card p,
+    .pricing-card ul li,
+    .testimonial-card .quote {
+        font-size: 0.75rem;
+    }
+
+    .cta-section p.lead {
+        font-size: 0.85rem;
+    }
+
+    footer p,
+    footer a {
+        font-size: 0.8rem;
+    }
+}

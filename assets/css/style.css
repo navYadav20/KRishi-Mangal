@@ -1,0 +1,289 @@
+/* Define CSS Variables for Light and Dark Modes */
+:root {
+    /* Light Mode Variables */
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --navbar-bg: #fff;
+    --navbar-border: #dee2e6;
+    --navbar-brand-color: #007bff;
+    --navbar-brand-hover: #0056b3;
+    --nav-link-color: #333;
+    --nav-link-hover: #007bff;
+    --nav-link-active: #007bff;
+    --card-bg: #fff;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --btn-primary-bg: #6e48aa;
+    --btn-primary-border: #6e48aa;
+    --btn-primary-hover-bg: #9d50bb;
+    --btn-primary-hover-border: #9d50bb;
+    --btn-success-bg: #28a745;
+    --btn-success-border: #28a745;
+    --btn-success-hover-bg: #218838;
+    --btn-success-hover-border: #218838;
+    --btn-danger-bg: #dc3545;
+    --btn-danger-border: #dc3545;
+    --btn-danger-hover-bg: #c82333;
+    --btn-danger-hover-border: #c82333;
+    --dropdown-bg: #fff;
+    --dropdown-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --dropdown-item-hover: #f8f9fa;
+}
+
+[data-theme="dark"] {
+    /* Dark Mode Variables */
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --navbar-bg: #2c2c2c;
+    --navbar-border: #444;
+    --navbar-brand-color: #66b0ff;
+    --navbar-brand-hover: #99ccff;
+    --nav-link-color: #e0e0e0;
+    --nav-link-hover: #66b0ff;
+    --nav-link-active: #66b0ff;
+    --card-bg: #2c2c2c;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --btn-primary-bg: #9d50bb;
+    --btn-primary-border: #9d50bb;
+    --btn-primary-hover-bg: #6e48aa;
+    --btn-primary-hover-border: #6e48aa;
+    --btn-success-bg: #218838;
+    --btn-success-border: #218838;
+    --btn-success-hover-bg: #28a745;
+    --btn-success-hover-border: #28a745;
+    --btn-danger-bg: #c82333;
+    --btn-danger-border: #c82333;
+    --btn-danger-hover-bg: #dc3545;
+    --btn-danger-hover-border: #dc3545;
+    --dropdown-bg: #2c2c2c;
+    --dropdown-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --dropdown-item-hover: #444;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-top: 70px; /* Adjust based on navbar height */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: var(--navbar-bg);
+    border-bottom: 1px solid var(--navbar-border);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--navbar-brand-color);
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: var(--navbar-brand-hover);
+}
+
+.nav-link {
+    color: var(--nav-link-color);
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--nav-link-hover);
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: var(--nav-link-active) !important;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    background-color: var(--dropdown-bg);
+    border-radius: 0.5rem;
+    box-shadow: var(--dropdown-shadow);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.dropdown-item {
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: var(--dropdown-item-hover);
+    color: var(--nav-link-hover);
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    box-shadow: var(--card-shadow);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    border-color: var(--btn-primary-border);
+    color: #fff; /* Ensure button text is white */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover-bg);
+    border-color: var(--btn-primary-hover-border);
+    color: #fff;
+}
+
+.btn-success {
+    background-color: var(--btn-success-bg);
+    border-color: var(--btn-success-border);
+    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-success:hover {
+    background-color: var(--btn-success-hover-bg);
+    border-color: var(--btn-success-hover-border);
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: var(--btn-danger-bg);
+    border-color: var(--btn-danger-border);
+    color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: var(--btn-danger-hover-bg);
+    border-color: var(--btn-danger-hover-border);
+    color: #fff;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--nav-link-color);
+    transition: color 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--nav-link-hover);
+}
+
+/* Adjust Bootstrap Classes for Dark Mode */
+[data-theme="dark"] .bg-light {
+    background-color: var(--background-color) !important;
+}
+
+[data-theme="dark"] .text-dark {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .text-primary {
+    color: #66b0ff !important; /* Adjust primary text color for dark mode */
+}
+
+[data-theme="dark"] .text-muted {
+    color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .btn-light {
+    background-color: #444;
+    color: #e0e0e0;
+    border-color: #444;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+[data-theme="dark"] .btn-light:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
+[data-theme="dark"] .btn-outline-primary {
+    color: #66b0ff;
+    border-color: #66b0ff;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: #66b0ff;
+    color: var(--background-color);
+}
+
+/* Smooth Transitions */
+* {
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Ensure Headings Use Text Color */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color) !important; /* Force headings to use --text-color */
+}
+
+/* Form Controls */
+.form-control {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--navbar-border);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.form-control:focus {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--nav-link-hover);
+    box-shadow: 0 0 5px rgba(102, 176, 255, 0.5);
+}
+
+/* Text Colors for Alerts */
+.text-success {
+    color: var(--btn-success-bg) !important;
+}
+
+.text-danger {
+    color: var(--btn-danger-bg) !important;
+}
+
+/* Ensure Labels Use Text Color */
+.form-label {
+    color: var(--text-color);
+}
+
+/* Card Specific Text */
+.card-title,
+.card-text {
+    color: var(--text-color);
+}
+
+/* Links */
+a {
+    color: var(--nav-link-color);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--nav-link-hover);
+}
+
+/* Disabled Buttons */
+.btn:disabled {
+    color: #a0a0a0 !important;
+}
+/* Ensure crops container adjusts dynamically */
+#crops-container {
+    transition: all 0.3s ease;
+}
