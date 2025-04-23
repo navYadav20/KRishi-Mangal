@@ -34,10 +34,42 @@ We envision a future where technology bridges the gap between rural farming and 
 
 
 
----
-
 ## 📈 Impact in Numbers
 
 - 🌾 5,000+ Crops Predicted  
 - 📍 200+ Farmers Reached  
 - 🧑‍🌾 20+ Weekly Crop Listings
+
+---
+
+## 🔒 Privacy Policy
+
+We are committed to protecting the privacy of our users. Any data collected via our platform (such as location, soil data, and crop history) is solely used to enhance user experience and improve crop prediction accuracy. We never share personal data with third parties without consent.
+
+---
+
+## 📃 Terms of Service
+
+By using Krishi Mangal, you agree to our terms of fair use. The platform is meant solely for informational and agricultural trading purposes. Users must refrain from misusing prediction models, API access, or attempting to exploit system vulnerabilities.
+
+---
+
+## 🚫 Piracy & Misuse Disclaimer
+
+All content, models, and services on Krishi Mangal are protected under copyright and proprietary terms. Unauthorized copying, distribution, resale, or reverse-engineering of the software or any of its components is strictly prohibited and may result in legal action.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
