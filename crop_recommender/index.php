@@ -1,7 +1,7 @@
 <?php
-// API Keys (Replace with your valid keys)
-$gemini_key = 'AIzaSyBl1W4CVWof67yJ4KyEglgEqEUUZjIMng0'; // Gemini API Key
-$weather_key = '53cfbd94d22893fe626ef5ec1a50c5d1'; // Replace with your valid OpenWeatherMap API Key
+// API Keys (Replace with your valid keys) , confidential 
+$gemini_key = 'API_key'; // Gemini API Key
+$weather_key = 'API_Key; // Replace with your valid OpenWeatherMap API Key
 
 // Initialize variables
 $crops = [];
